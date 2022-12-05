@@ -10,14 +10,13 @@ function generate() {
 
 function newPassword() {
     let newest = '';
-    for (let i=0; i<=15; i++) {
-        
+    for (let i=0; i<15; i++) {
+        newest += randomChar();
     }
+    return newest;
 }
 
 function randomChar() {
     let randomIndex = Math.floor(Math.random()*characters.length) + 1;
     return characters[randomIndex];
 }
-
-console.log(randomChar());
