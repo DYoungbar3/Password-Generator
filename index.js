@@ -5,7 +5,8 @@ let firstPasswordEl = document.getElementById('first-password');
 let secondPasswordEl = document.getElementById('second-password');
 
 function generate() {
-
+    firstPasswordEl.textContent = newPassword();
+    secondPasswordEl.textContent = newPassword();
 }
 
 function newPassword() {
