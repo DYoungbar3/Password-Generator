@@ -35,6 +35,27 @@ p {
     color: #D5D4D8;
 }
 
+#checks {
+    display: flex;
+}
+
+#symbols-container {
+    margin-right: 50px;
+}
+
+input#symbols, input#numbers {
+    width: 22px;
+    height: 22px;
+}
+
+label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+}
+
 button {
     display: flex;
     flex-direction: row;
