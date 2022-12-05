@@ -9,5 +9,15 @@ function generate() {
 }
 
 function newPassword() {
-
+    let newest = '';
+    for (let i=0; i<=15; i++) {
+        
+    }
 }
+
+function randomChar() {
+    let randomIndex = Math.floor(Math.random()*characters.length) + 1;
+    return characters[randomIndex];
+}
+
+console.log(randomChar());
