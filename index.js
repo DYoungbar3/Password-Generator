@@ -23,6 +23,18 @@ function newPassword() {
 }
 
 function randomChar() {
-    let randomIndex = Math.floor(Math.random()*characters.length) + 1;
-    return characters[randomIndex];
+    let chosenChars = [];
+
+    if (symbolBox.checked && numBox.checked) {
+        chosenChars = [...alphaChars, ...numChars, ...symbolChars];
+    } else if (symbolBox.checked && !numBox.checked) {
+        chosenChars = [...alphaChars, ...symbolChars];
+    } else if (numBox.checked && !symbolBox.checked) {
+        chosenChars = [...alphaChars, ...numChars];
+    } else if (!numBox.checked && !symbolBox.checked) {
+        chosenChars = [...alphaChars];
+    }
+
+    let randomIndex = Math.floor(Math.random()*chosenChars.length);
+    return chosenChars[randomIndex];
 }
